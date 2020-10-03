@@ -1,0 +1,28 @@
+ALGORITHM algorithm_name
+VAR
+    sentence: STRING:= ""
+    character:CHAR;
+    len : INTEGER:=0;
+    wordNum:INTEGER:=0;
+    vowelNums:INTEGER:0;
+BEGIN
+REPEAT
+    
+    read(character);
+    len+=1;
+    sentence += character;
+UNTIL ( character == "." );
+    FOR i FROM 0 TO len-1 STEP 1  DO
+        IF (sentence[i] == " ") THEN
+            wordNum+=1;
+        END_IF
+    END_FOR
+    SWITCH (sentence[i]) DO
+        case "a":vowelNums +=1; 
+        case "e":vowelNums +=1; 
+        case "i":vowelNums +=1; 
+        case "o":vowelNums +=1; 
+        case "u":vowelNums +=1; 
+        case "y":vowelNums +=1;
+    END_SWITCH
+END
